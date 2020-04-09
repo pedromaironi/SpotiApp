@@ -1,0 +1,9 @@
+<div class="row animated fadeIn mb-5">
+    <div class="col">
+        <input #txtBuscar type="text" (keyup)="buscar(txtBuscar.value)" class="form-control" placeholder="buscar artista">
+    </div>
+</div>
+
+<app-loading class="mt-5" *ngIf="loading"></app-loading>
+<app-error [error]='mensaje'></app-error>
+<app-tarjetas [items]="artistas"></app-tarjetas>
